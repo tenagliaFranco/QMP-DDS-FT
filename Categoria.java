@@ -1,0 +1,3 @@
+public enum Categoria {
+  CALZADO, PARTESUPERIOR, PARTEINFERIOR, ACCESORIOS
+}
