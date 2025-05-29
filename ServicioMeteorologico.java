@@ -1,3 +1,3 @@
 public interface ServicioMeteorologico {
-  int consultarTemperatura(String direccion);
+  EstadoDelTiempo obtenerCondicionesClimaticas(String direccion);
 }

@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class AsesorDeImagen {
-  private ServicioMeteorologicoAccuWeather servicioMeteorologico;
+  private ServicioMeteorologico servicioMeteorologico;
 
   public AsesorDeImagen(ServicioMeteorologicoAccuWeather servicioMeteorologico) {
     this.servicioMeteorologico = servicioMeteorologico;

@@ -6,4 +6,8 @@ public class EstadoDelTiempo {
     this.temperatura = temperatura;
     this.humedad = humedad;
   }
+
+  public int getTemperatura() {
+    return temperatura;
+  }
 }

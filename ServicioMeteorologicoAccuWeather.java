@@ -1,9 +1,10 @@
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.Map;
 
 public class ServicioMeteorologicoAccuWeather implements ServicioMeteorologico {
-  private Map<String, RespuestaMeteorologica> ultimasRespuestas;
+  private Map<String, RespuestaMeteorologica> ultimasRespuestas = new HashMap<>();
   private LocalDateTime proximaExpiracion;
   private AccuWeatherAPI api;
   private Duration periodoDeValidez;
@@ -15,7 +16,7 @@ public class ServicioMeteorologicoAccuWeather implements ServicioMeteorologico {
 
   public EstadoDelTiempo obtenerCondicionesClimaticas(String direccion) {
     if (!this.ultimasRespuestas.containsKey(direccion) || this.ultimasRespuestas.get(direccion).expiro()) {
-      ultimasRespuestas.put(new RespuestaMeteorologica(consultarApi(direccion), proximaExpiracion()));
+      ultimasRespuestas.put(direccion, new RespuestaMeteorologica(consultarApi(direccion), proximaExpiracion()));
     }
     return this.ultimasRespuestas.get(direccion).getEstadoDelTiempo();
   }
