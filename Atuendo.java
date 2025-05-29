@@ -8,4 +8,10 @@ public class Atuendo {
     this.inferior = inferior;
     this.calzado = calzado;
   }
+
+  public boolean aptoParaTemperatura(int temperatura) {
+    return superior.aptoParaTemperatura(temperatura)
+        && inferior.aptoParaTemperatura(temperatura)
+        && calzado.aptoParaTemperatura(temperatura);
+  }
 }

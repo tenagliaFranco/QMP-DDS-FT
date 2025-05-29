@@ -12,5 +12,4 @@ public class Guardarropas {
   public Atuendo generarSugerencia() {
     return motorSugerencias.generarAtuendo(prendas);
   }
-
 }

@@ -5,6 +5,8 @@ public class Prenda {
   public Color colorPrimario;
   public Color colorSecundario;
   public Formalidad formalidad;
+  public int tempMinima;
+  public int tempMaxima;
 
   public Prenda(TipoPrenda tipoPrenda, Material material, Trama trama, Color colorPrimario, Color colorSecundario, Formalidad formalidad) {
     this.tipoPrenda = tipoPrenda;
@@ -21,4 +23,7 @@ public class Prenda {
 
   public boolean esFormal() { return formalidad == Formalidad.FORMAL; }
 
+  public boolean aptoParaTemperatura(int temperatura) {
+    return tempMinima < temperatura && tempMaxima < temperatura;
+  }
 }
